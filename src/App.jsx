@@ -1,11 +1,13 @@
 import { useState } from 'react'
+import Dashboard from './components/Dashboard'
+import { UserProvider } from './context/UserContext'
 
 function App () {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <p>React with Vite</p>
+      <UserProvider>
+        <Dashboard />
+      </UserProvider>
     </>
   )
 }
